@@ -6,7 +6,7 @@ services:
       context: ./client
     ports:
       - "4200:4200"
-    container_name: client
+    container_name: aweky5/client
     depends_on:
       - api
       - webapi
@@ -17,7 +17,7 @@ services:
     ports:
       - "5000:5000"
     restart: always
-    container_name: api
+    container_name: aweky5/api
     depends_on:
       - nginx
       - emongo
@@ -28,7 +28,7 @@ services:
     ports:
       - "9000:9000"
     restart: always
-    container_name: webapi
+    container_name: aweky5/webapi
     depends_on:
       - emartdb
 
